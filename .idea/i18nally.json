@@ -1,0 +1,86 @@
+{
+  "version" : "1.2",
+  "profiles" : [ {
+    "id" : "3e631f27-5151-45c5-8120-52afaf09623b",
+    "name" : "Laravel (PHP, BLADE)",
+    "keyNamingPattern" : "SNAKE_CASE_PATTERN",
+    "sink" : {
+      "id" : "3be75de4-3665-48c8-88eb-813ed3297002",
+      "type" : "namespaced",
+      "translationsDirectory" : "$PROJECT_DIR$/resources/lang",
+      "fileType" : "php",
+      "defaultLocale" : "vi",
+      "namespaces" : [ "auth", "pagination", "passwords", "validation" ],
+      "outputFilenameTemplate" : "%locale%/%namespace%.php",
+      "nestingType" : "DOT",
+      "placeholderFormatterName" : "LARAVEL"
+    },
+    "sources" : [ {
+      "id" : "b535a454-15a5-4b79-aca6-e0b32216e507",
+      "type" : "php",
+      "scopeName" : "i18n Ally: Laravel/PHP source",
+      "scopePattern" : "file[adminbase]:app//*&&!file[adminbase]:app/Broadcasting//*&&!file[adminbase]:app/Console//*&&!file[adminbase]:app/Events//*&&!file[adminbase]:app/Exceptions//*&&!file[adminbase]:app/Models//*&&!file[adminbase]:app/Providers//*",
+      "defaultReplacementTemplate" : "trans('%namespace%.%key%', %map%)",
+      "recognizedReplacementTemplates" : [ ],
+      "skipDefaultNamespace" : false,
+      "sprintfMode" : false
+    }, {
+      "id" : "55b11ab5-23f3-4b4e-81ed-bda7e4c89d5f",
+      "type" : "blade",
+      "scopeName" : "i18n Ally: Laravel/Blade templates",
+      "scopePattern" : "file[adminbase]:resources/views//*",
+      "defaultReplacementTemplate" : "trans('%namespace%.%key%', %map%)",
+      "attributeReplacementTemplate" : "",
+      "inlineTagsReplacementTemplate" : "",
+      "recognizedReplacementTemplates" : [ ],
+      "inlineTagNames" : [ "a", "abbr", "acronym", "b", "bdi", "bdo", "big", "br", "cite", "code", "data", "del", "dfn", "em", "i", "img", "input", "ins", "kbd", "label", "mark", "meter", "output", "progress", "q", "ruby", "s", "samp", "slot", "small", "span", "strong", "sub", "sup", "time", "u", "tt", "var", "wbr" ],
+      "translatableAttributeNames" : [ "title", "alt", "placeholder", "label", "aria-label" ],
+      "skipDefaultNamespace" : false
+    } ]
+  }, {
+    "id" : "61d3ae91-9a81-415e-9cac-83cdf535124f",
+    "name" : "Symfony (PHP, TWIG)",
+    "keyNamingPattern" : "SNAKE_CASE_PATTERN",
+    "sink" : {
+      "id" : "802732fc-a677-4da9-a7d8-eaf006f8705c",
+      "type" : "namespaced",
+      "translationsDirectory" : "$PROJECT_DIR$/resources/lang",
+      "fileType" : "php",
+      "defaultLocale" : "en",
+      "namespaces" : [ "auth", "pagination", "passwords", "validation" ],
+      "outputFilenameTemplate" : "%locale%/%namespace%.php",
+      "nestingType" : "DOT",
+      "placeholderFormatterName" : "SYMFONY_REPLACEMENT"
+    },
+    "sources" : [ {
+      "id" : "009a780e-ad72-46c7-b1d5-c4a281dec463",
+      "type" : "php",
+      "scopeName" : "i18n Ally: Symfony/PHP source",
+      "scopePattern" : "file[adminbase]:src//*&&!file[adminbase]:src/DataFixtures//*",
+      "defaultReplacementTemplate" : "$this->translator->trans('%key%', %map%, '%namespace%')",
+      "recognizedReplacementTemplates" : [ ],
+      "skipDefaultNamespace" : true,
+      "sprintfMode" : false
+    }, {
+      "id" : "770acf7d-439f-45ad-8000-d306cfedf573",
+      "type" : "twig",
+      "scopeName" : "i18n Ally: Symfony/Twig templates",
+      "scopePattern" : "file[adminbase]:templates//*",
+      "defaultReplacementTemplate" : "trans(%map%, '%namespace%')",
+      "attributeReplacementTemplate" : "",
+      "inlineTagsReplacementTemplate" : "trans(%map%, '%namespace%')|raw",
+      "recognizedReplacementTemplates" : [ ],
+      "inlineTagNames" : [ "a", "abbr", "acronym", "b", "bdi", "bdo", "big", "br", "cite", "code", "data", "del", "dfn", "em", "i", "img", "input", "ins", "kbd", "label", "mark", "meter", "output", "progress", "q", "ruby", "s", "samp", "slot", "small", "span", "strong", "sub", "sup", "time", "u", "tt", "var", "wbr" ],
+      "translatableAttributeNames" : [ "title", "alt", "placeholder", "label", "aria-label" ],
+      "skipDefaultNamespace" : true
+    } ]
+  } ],
+  "ignores" : {
+    "valuesInProject" : [ "use strict" ],
+    "valuesInFile" : { },
+    "filesInProject" : [ ],
+    "unignoredFunctionNames" : [ ],
+    "unignoredFunctionArguments" : { },
+    "ignoredArrayKeys" : [ "class", "selector", "template", "middleware", "layout", "el", "component", "type", "name", "id", "key", "sql", "query", "dateFormat", "date", "condition" ]
+  }
+}

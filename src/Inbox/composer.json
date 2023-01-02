@@ -1,0 +1,23 @@
+{
+    "name": "nghianb/inbox",
+    "description": "",
+    "authors": [
+        {
+            "name": "NghiaNB",
+            "email": "nghianb.it@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Inbox\\": ""
+        }
+    }
+}

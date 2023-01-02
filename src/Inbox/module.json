@@ -1,0 +1,13 @@
+{
+    "name": "Inbox",
+    "alias": "inbox",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Inbox\\Providers\\InboxServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

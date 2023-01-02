@@ -1,0 +1,15 @@
+{
+    "Core": true,
+    "User": true,
+    "Payment": true,
+    "Setting": true,
+    "Notification": true,
+    "Media": true,
+    "Catalog": true,
+    "Cart": true,
+    "Order": true,
+    "Appearance": true,
+    "Shipping": true,
+    "Inventory": true,
+    "Inbox": true
+}
